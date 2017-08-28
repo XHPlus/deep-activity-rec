@@ -24,15 +24,15 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.optimization.level.99965190" name="Optimization Level" superClass="gnu.cpp.compiler.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.1793442040" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.576023052" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/OPENCV/3.0.0-CUDA65/include"/>
-									<listOptionValue builtIn="false" value="/usr/include/openblas"/>
-									<listOptionValue builtIn="false" value="/cs/vml2/msibrahi/workspaces/caffe-lstm/include"/>
-									<listOptionValue builtIn="false" value="/cs/vml2/msibrahi/workspaces/caffe-lstm/build/src"/>
-									<listOptionValue builtIn="false" value="/cs/vml2/msibrahi/workspaces/software/dlib"/>
-									<listOptionValue builtIn="false" value="/usr/local/cuda-6.5/include"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/BOOST/1.57.0/include"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/GLOG/0.3.3/include"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LANG/PYTHON/2.7.6-SYSTEM/include/python2.7"/>
+                                    <listOptionValue builtIn="false" value="/usr/include/opencv2"/>
+									<listOptionValue builtIn="false" value="/usr/include/"/>
+                                    <listOptionValue builtIn="false" value="/home/sensetime/group_action/caffe-lstm/include"/>
+                                    <listOptionValue builtIn="false" value="/home/sensetime/group_action/caffe-lstm/build/src"/>
+                                    <listOptionValue builtIn="false" value="/home/sensetime/group_action/dlib"/>
+									<listOptionValue builtIn="false" value="/usr/local/cuda/include"/>
+                                    <listOptionValue builtIn="false" value="/usr/include/boost"/>
+                                    <listOptionValue builtIn="false" value="/usr/include/glog"/>
+									<listOptionValue builtIn="false" value="/usr/include/python2.7"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.other.other.566250675" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -std=c++0x" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.157465269" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -60,19 +60,19 @@
 									<listOptionValue builtIn="false" value="boost_python"/>
 									<listOptionValue builtIn="false" value="python2.7"/>
 									<listOptionValue builtIn="false" value="caffe"/>
+									<listOptionValue builtIn="false" value="pthread"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.1032436377" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/OPENCV/3.0.0-CUDA65/lib"/>
-									<listOptionValue builtIn="false" value="/cs/vml2/msibrahi/workspaces/caffe-lstm/build/lib"/>
+                                    <listOptionValue builtIn="false" value="/usr/local/opencv-2.4.13-ffmpeg/lib"/>
+                                    <listOptionValue builtIn="false" value="/home/sensetime/group_action/caffe-lstm/build/lib"/>
 									<listOptionValue builtIn="false" value="/usr/local/lib"/>
 									<listOptionValue builtIn="false" value="/usr/lib"/>
-									<listOptionValue builtIn="false" value="/usr/local/cuda-6.5/lib64"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LANG/PYTHON/2.7.6-SYSTEM/lib"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/GLOG/0.3.3/lib"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/BOOST/1.57.0/lib"/>
+									<listOptionValue builtIn="false" value="/usr/local/cuda/lib64"/>
+                                    <listOptionValue builtIn="false" value="/usr/lib/python2.7"/>
+                                    <listOptionValue builtIn="false" value="/usr/lib/x86_64-linux-gnu"/>
 								</option>
 								<option id="gnu.cpp.link.option.userobjs.1707235531" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
-									<listOptionValue builtIn="false" value="/cs/vml2/msibrahi/workspaces/software/dlib/examples/build/dlib_build/libdlib.a"/>
+                                    <listOptionValue builtIn="false" value="/home/sensetime/group_action/dlib/examples/build/dlib_build/libdlib.a"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1819208667" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -116,14 +116,14 @@
 								<option id="gnu.cpp.compiler.option.other.other.1802321637" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -std=c++0x" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.include.paths.443797051" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/OPENCV/3.0.0-CUDA65/include"/>
-									<listOptionValue builtIn="false" value="/usr/include/openblas"/>
-									<listOptionValue builtIn="false" value="/cs/vml2/msibrahi/workspaces/caffe-lstm/include"/>
-									<listOptionValue builtIn="false" value="/cs/vml2/msibrahi/workspaces/caffe-lstm/build/src"/>
-									<listOptionValue builtIn="false" value="/cs/vml2/msibrahi/workspaces/software/dlib"/>
-									<listOptionValue builtIn="false" value="/usr/local/cuda-6.5/include"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/BOOST/1.57.0/include"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/GLOG/0.3.3/include"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LANG/PYTHON/2.7.6-SYSTEM/include/python2.7"/>
+									<listOptionValue builtIn="false" value="/usr/include/"/>
+                                    <listOptionValue builtIn="false" value="/home/sensetime/group_action/caffe-lstm/include"/>
+                                    <listOptionValue builtIn="false" value="/home/sensetime/group_action/caffe-lstm/build/src"/>
+                                    <listOptionValue builtIn="false" value="/home/sensetime/group_action/dlib"/>
+									<listOptionValue builtIn="false" value="/usr/local/cuda/include"/>
+                                    <listOptionValue builtIn="false" value="/usr/include/boost"/>
+                                    <listOptionValue builtIn="false" value="/usr/include/glog"/>
+									<listOptionValue builtIn="false" value="/usr/include/python2.7"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1753181949" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -149,19 +149,19 @@
 									<listOptionValue builtIn="false" value="boost_python"/>
 									<listOptionValue builtIn="false" value="python2.7"/>
 									<listOptionValue builtIn="false" value="caffe"/>
+									<listOptionValue builtIn="false" value="pthread"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.229833833" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/OPENCV/3.0.0-CUDA65/lib"/>
-									<listOptionValue builtIn="false" value="/cs/vml2/msibrahi/workspaces/caffe-lstm/build/lib"/>
+                                    <listOptionValue builtIn="false" value="/usr/local/opencv-2.4.13-ffmpeg/lib"/>
+                                    <listOptionValue builtIn="false" value="/home/sensetime/group_action/caffe-lstm/build/lib"/>
 									<listOptionValue builtIn="false" value="/usr/local/lib"/>
 									<listOptionValue builtIn="false" value="/usr/lib"/>
-									<listOptionValue builtIn="false" value="/usr/local/cuda-6.5/lib64"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LANG/PYTHON/2.7.6-SYSTEM/lib"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/GLOG/0.3.3/lib"/>
-									<listOptionValue builtIn="false" value="/rcg/software/Linux/RHEL/6/x86_64/LIB/BOOST/1.57.0/lib"/>
+									<listOptionValue builtIn="false" value="/usr/local/cuda/lib64"/>
+                                    <listOptionValue builtIn="false" value="/usr/lib/python2.7"/>
+                                    <listOptionValue builtIn="false" value="/usr/lib/x86_64-linux-gnu"/>
 								</option>
 								<option id="gnu.cpp.link.option.userobjs.620271518" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
-									<listOptionValue builtIn="false" value="/cs/vml2/msibrahi/workspaces/software/dlib/examples/build/dlib_build/libdlib.a"/>
+                                    <listOptionValue builtIn="false" value="/home/sensetime/group_action/dlib/examples/build/dlib_build/libdlib.a"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.38237156" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>

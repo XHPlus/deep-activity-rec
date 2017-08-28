@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CAFFE=/cs/vml2/msibrahi/workspaces/caffe-lstm
+CAFFE=/home/sensetime/group_action/caffe-lstm
 
 GIT_PROJ_DIR=$CAFFE/examples/deep-activity-rec
 DATASET_VIDEOS=$GIT_PROJ_DIR/volleyball-simple
@@ -20,7 +20,7 @@ NETWORK1_TRAIN_ITERS=1
 
 # Fusion Styles: Choose 0-7
 # 0 => Conc / 1 group       1 => Max / 1 group        4 => Avg / 1 group        7 => sum / 1 group
-# 2 => Max / 2 groups	    5 => Avg / 2 groups       3 => Max / 4 groups       6 => Avg / 4 groups    
+# 2 => Max / 2 groups	    5 => Avg / 2 groups       3 => Max / 4 groups       6 => Avg / 4 groups
 FUSION_STYLE=2
 FUSION_TRAIN_ITER=2
 FUSION_TEST_ITER=2
@@ -42,10 +42,10 @@ EXE_P4_NETWORK2=exePhase3
 
 ###########################################################################
 echo ------------------------------------------------------
-echo 
+echo
 echo "START processing script" "$0"
 echo "OUTPUT Directory is " $OUTPUT_DIR
-echo 
+echo
 echo Doing path VALIDATIONS
 
 ## Some directories / files validation
@@ -86,7 +86,7 @@ $GIT_PROJ_DIR/$EXE_P1_NETWORK1  \
   $DATASET_CONFIG   \
   $NETWORK1_DIR       $WINDOW_NETWORK1    $STEP  1 \
   2>&1 |  tee    \
-  $NETWORK1_DIR/z_log_dataset_net1.txt   
+  $NETWORK1_DIR/z_log_dataset_net1.txt
 
 
 echo ========================
@@ -130,7 +130,7 @@ $GIT_PROJ_DIR/$EXE_P2_FUSE   \
   $DATASET_CONFIG   \
   $NETWORK2_LEVELDB_FUSION_DIR       $WINDOW_NETWORK2    $STEP  0  \
   2>&1 |  tee    \
-  $NETWORK2_LEVELDB_FUSION_DIR/z_log_dataset_fuse.txt   
+  $NETWORK2_LEVELDB_FUSION_DIR/z_log_dataset_fuse.txt
 
 echo ========================
 
@@ -154,7 +154,7 @@ read -t 10
 
 ###############
 echo ------------------------------------------------------
-# Info: # iterations (e.g. 10863 = 17 * 639. 639 is the # of test cases. 
+# Info: # iterations (e.g. 10863 = 17 * 639. 639 is the # of test cases.
 # Info: Inside the prototxt, a batch # equal to # of persons (e.g. 5). 17 = 2 * 8 +1. 8 is the right temporal width
 
 echo Phase 3 - Generarting LSTM 2 Data - $NETWORK2_DIR
@@ -218,8 +218,8 @@ $NETWORK2_DIR/$TRAIN_SRC-$TEST_SRC-window-evaluation-exe-script.sh
 
 ###############
 echo ------------------------------------------------------
-echo 
+echo
 echo DONE processing script "$0"
-echo 
+echo
 echo ------------------------------------------------------
 

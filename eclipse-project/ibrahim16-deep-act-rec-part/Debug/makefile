@@ -45,7 +45,7 @@ all: ibrahim16-deep-act-rec-part
 ibrahim16-deep-act-rec-part: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L/rcg/software/Linux/RHEL/6/x86_64/LIB/OPENCV/3.0.0-CUDA65/lib -L/cs/vml2/msibrahi/workspaces/caffe-lstm/build/lib -L/usr/local/lib -L/usr/lib -L/usr/local/cuda-6.5/lib64 -L/rcg/software/Linux/RHEL/6/x86_64/LANG/PYTHON/2.7.6-SYSTEM/lib -L/rcg/software/Linux/RHEL/6/x86_64/LIB/GLOG/0.3.3/lib -L/rcg/software/Linux/RHEL/6/x86_64/LIB/BOOST/1.57.0/lib -o "ibrahim16-deep-act-rec-part" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L/usr/local/opencv-2.4.13-ffmpeg/lib -L/home/sensetime/group_action/caffe-lstm/build/lib -L/usr/local/lib -L/usr/lib -L/usr/local/cuda/lib64 -L/usr/lib/python2.7 -L/usr/lib/x86_64-linux-gnu -o "ibrahim16-deep-act-rec-part" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -55,6 +55,5 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents
-.SECONDARY:
 
 -include ../makefile.targets

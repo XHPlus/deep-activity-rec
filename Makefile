@@ -1,8 +1,8 @@
 USE_CPU := -DCPU_ONLY=0
 
 # TODO: Update next 2 directories
-CAFFE_LSTM_DIR := <SomePath1>/caffe-lstm
-DLIB_DIR := <SomePath2>/dlib
+CAFFE_LSTM_DIR := /home/sensetime/group_action/caffe-lstm
+DLIB_DIR := /home/sensetime/group_action/dlib
 
 RM := rm -rf
 CC := g++
@@ -10,7 +10,13 @@ CC_OPTIONS = -std=gnu++0x -Wall -c -fmessage-length=0 -O3 $(USE_CPU)
 CFLAGS = -fPIC $(CC_OPTIONS)
 
 # TODO: Add/Remove if needed (e.g. Opencv directories)
-INCS_DIRS := -I$(CAFFE_LSTM_DIR)/include -I$(CAFFE_LSTM_DIR)/build/src -I$(DLIB_DIR)
+INCS_DIRS := -I$(CAFFE_LSTM_DIR)/include -I$(CAFFE_LSTM_DIR)/build/src -I$(DLIB_DIR) -I/usr/local/include    \
+			-I/usr/include    \
+			-I/usr/local/cuda/include    \
+			-I/usr/include/boost    \
+			-I/usr/include/glog    \
+			-I/usr/include/python2.7	\
+			-I/home/sensetime/group_action/caffe-lstm/include
 #             -I<SomePath3>/LIB/OPENCV/3.0.0-CUDA65/include    \
 #             -I/usr/include/openblas    \
 #             -I/usr/local/cuda-6.5/include    \
@@ -18,7 +24,12 @@ INCS_DIRS := -I$(CAFFE_LSTM_DIR)/include -I$(CAFFE_LSTM_DIR)/build/src -I$(DLIB_
 #             -I<SomePath3>/LIB/GLOG/0.3.3/include    \
 #             -I<SomePath3>/LANG/PYTHON/2.7.6-SYSTEM/include/python2.7
 
-LIBS_DIRS := -L$(DLIB_DIR) -L$(CAFFE_LSTM_DIR)/build/lib
+LIBS_DIRS := -L$(DLIB_DIR) -L$(CAFFE_LSTM_DIR)/build/lib -L/usr/local/lib    \
+             -L/usr/lib    \
+             -L/usr/local/cuda/lib64    \
+             -L/usr/lib/python2.7    \
+             -L/usr/lib/x86_64-linux-gnu    \
+			 -L/home/sensetime/group_action/dlib/examples/build/dlib_build
 #             -L<SomePath3>/LIB/OPENCV/3.0.0-CUDA65/lib    \
 #             -L/usr/lib    \
 #             -L/usr/local/cuda-6.5/lib64    \
@@ -27,9 +38,9 @@ LIBS_DIRS := -L$(DLIB_DIR) -L$(CAFFE_LSTM_DIR)/build/lib
 #             -L<SomePath3>/LIB/BOOST/1.57.0/lib    \
 #             -L/cs/vml2/msibrahi/workspaces/software/dlib/examples/build/dlib_build
 
-LIBS := -lboost_system -lboost_filesystem -lboost_chrono -lboost_python            \
+LIBS := -lboost_system -lboost_thread -lboost_filesystem -lboost_chrono -lboost_python            \
         -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_ml                \
-        -lpython2.7 -lleveldb -lprotobuf -lgflags -lglog -pthread -lcaffe -ldlib
+        -lpython2.7 -lleveldb -lprotobuf -lgflags -lglog -pthread -lcaffe -ldlib -lstdc++ -lopenblas
 
 ############################################################
 
